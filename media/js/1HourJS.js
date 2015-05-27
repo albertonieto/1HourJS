@@ -1,5 +1,3 @@
-var numberHolder = 0;
-
 var welcomeMsg = 'Welcome to this test.';
 var successMsg = 'Well done!';
 var textChangeMsg = 'The text has been changed.';
@@ -15,10 +13,13 @@ function clickButton(){
 //Changing text
 function changeText(){
 	document.getElementById('textChange').innerHTML = textChangeMsg;
+	document.getElementById('textChange').style.color = 'blue';
 }
 
 //Working with user inputs
 function manageUserInput(){
 	var userTextInput = document.getElementById('userText').value;
 	alert(userTextInput);
+	//Calling function inside function
+	changeText();
 }
